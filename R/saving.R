@@ -109,8 +109,9 @@ save_gganimate_custom <- function(g, filename, clean = TRUE, ...) {
     suppressMessages(ggsave(gtables_aligned[[i]],
                             filename = filenames[i],
                             bg = bg, ...))
-  }
-
+  }  
+  
+# why is thsi???
   command <- paste("convert -dispose none -delay 0 %s",
                    "-dispose previous -delay %d %s",
                    "-loop 0 %s")
